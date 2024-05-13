@@ -10,8 +10,10 @@ Beispiel:
 
 ## Verwendete HACS Integrationen:
 
-- https://github.com/DBuit/sidebar-card.git
-- https://github.com/zanna-37/hass-swipe-navigation.git
-- https://github.com/custom-cards/button-card.git
-- https://github.com/pkissling/clock-weather-card.git
-- https://github.com/MaxxKra/caule-themes-pack-1.git
+| **TYPE** | **LINK** |
+| --- | --- |
+| Sidbar Card | https://github.com/DBuit/sidebar-card.git |
+| Swipe Navigaton | https://github.com/zanna-37/hass-swipe-navigation.git |
+| Button Cartd | https://github.com/custom-cards/button-card.git |
+| Clock Weather Card | https://github.com/pkissling/clock-weather-card.git |
+| Caule Themes | https://github.com/MaxxKra/caule-themes-pack-1.git |
