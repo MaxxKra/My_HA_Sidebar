@@ -1,0 +1,210 @@
+sidebar:
+
+#------------------------------------------------------------
+## Grundeinstellungen
+#------------------------------------------------------------
+  hideTopMenu: false # true, wenn die HA Top-Menü-Leiste ausgeblendet werden soll
+  hideHassSidebar: false # true, wenn die HA Seiten-Menü-Leiste ausgeblendet werden soll
+# Wenn man die Seitenleiste oder das Topmenü mit diesen Funktionen ausgeblendet hat, kann man dies wieder deaktivieren, 
+# indem man '?sidebarOff' an die Browseradresse (URL) anhängt
+  width:
+    desktop: 18 # Breite der Seitenleiste in %
+
+#------------------------------------------------------------
+## Digitale Uhr
+#------------------------------------------------------------
+  digitalClock: true # false, wenn keine digitale Uhr angezeigt werden soll
+  digitalClockWithSeconds: false # true, wenn die digitale Uhr mit Sekundenanzeige sein soll
+
+#------------------------------------------------------------
+## Analoge Uhr
+#------------------------------------------------------------
+  clock: true # false, wenn keine analoge Uhr angezeigt werden soll
+
+#------------------------------------------------------------
+## Datum
+#------------------------------------------------------------
+  date: true # false, wenn kein Datum angezeigt werden soll
+  dateFormat: dddd, DD. MMMM YYYY # Datumsformat einstellen
+
+#------------------------------------------------------------
+## Seitenleiste - Menü
+#------------------------------------------------------------
+  sidebarMenu:
+    - action: navigate
+      navigation_path: /dashboard-sidebar/floorplan
+      name: Floorplan
+      active: true
+      icon: mdi:floor-plan
+    - action: navigate
+      navigation_path: /dashboard-sidebar/ubersicht
+      name: Übersicht
+      active: true
+      icon: mdi:toggle-switch
+    - action: navigate
+      navigation_path: /dashboard-sidebar/alles-mull
+      name: Alles Müll
+      active: true
+      icon: mdi:trash-can
+    - action: navigate
+      navigation_path: /dashboard-sidebar/geburtstage
+      name: Geburtstage
+      active: true
+      icon: mdi:cake-variant-outline
+# Alternativ zur action 'navigate' , kann auch 'more-info', 'toggle', 'call-service', 'url' oder 'none' verwendet werden
+
+#------------------------------------------------------------
+## Sensor-Werte Anzeige
+#------------------------------------------------------------
+  template: >
+    <li>
+      {% if now().hour  < 5 %} Gute Nacht {{'\U0001F634'}}
+      {% elif now().hour < 12 %} Guten Morgen {{'\u2615\uFE0F'}}
+      {% elif now().hour < 18 %} Guten Tag {{'\U0001F44B\U0001F3FB'}}
+      {% else %} Guten Abend {{'\U0001F44B\U0001F3FB'}}{% endif %}
+
+    </li>
+
+    {% if states('sensor.zahler_lights_gesamt') | float == 0 %} <li>Es sind
+    keine Lampen an!</li> {% endif %}
+
+    {% if states('sensor.zahler_lights_gesamt') | float == 1 %} <li>Es ist eine
+    Lampe an!</li> {% endif %}
+
+    {% if states('sensor.zahler_lights_gesamt') | float > 1 %} <li>Es sind
+    {{states('sensor.zahler_lights_gesamt')}} Lampen an!</li> {% endif %}
+
+    {% if states('sensor.zahler_schalter_gesamt') | float == 0 %} <li>Es sind
+    keine Schalter eingeschaltet!</li> {% endif %}
+
+    {% if states('sensor.zahler_schalter_gesamt') | float == 1 %} <li>Es ist ein
+    Schalter eingeschaltet!</li> {% endif %}
+
+    {% if states('sensor.zahler_schalter_gesamt') | float > 1 %} <li>Es sind
+    {{states('sensor.zahler_schalter_gesamt')}} Schalter eingeschaltet!</li> {%
+    endif %}
+
+#------------------------------------------------------------
+## Untere Karten
+#------------------------------------------------------------
+  bottomCard:
+    type: custom:vertical-stack-in-card
+    card_mod:
+      style: |
+        ha-card {
+          border: none;
+          background: transparent;
+        }
+    cardOptions:
+      cards:
+        - type: custom:clock-weather-card
+          entity: weather.smart_home_test
+          forecast_rows: 2
+          hide_clock: true
+          hide_date: true
+          card_mod:
+            style: |
+              ha-card {
+                background: transparent;
+              }
+        - type: custom:button-card
+          entity: switch.vollbild_touch_pc
+          show_state: false
+          show_icon: true
+          icon: mdi:arrow-expand
+          layout: icon_name
+          name: Vollbild
+          size: 15%
+          styles:
+            card:
+              - background: transparent
+    cardStyle: |
+      :host {
+        width: 100%;
+      }
+      ha-card {
+        border: none;
+        background: transparent;
+      }
+
+#------------------------------------------------------------
+## Einstellungen Farben, Schriften, Hintergründe
+#------------------------------------------------------------
+  style: |
+    :host {
+        --sidebar-background: var(--primary-background-color);
+        --sidebar-text-color: var(--primary-text-color);
+        --border-radius: 5px;
+        --face-color: var(--primary-text-color);
+        --face-border-color: var(--primary-text-color);
+        --clock-hands-color: var(--primary-background-color);
+        --clock-seconds-hand-color: var(--primary-color);
+        --clock-middle-background: var(--primary-text-color);
+        --clock-middle-border: var(--primary-background-color);
+        box-shadow: inset -19px -1px 5px -14px var(--divider-color);
+        border-radius: 15px 0px 0px 15px;
+    }
+    #customSidebar {
+       z-index: 9999!important;
+     }
+    .sidebarMenu li {
+        line-height: 35px!important;
+        color: var(--primary-text-color)!important;
+     }
+    .bottom {
+        width: 100% !important;
+    }
+    .sidebarMenu li.active {
+        background-color: var(--primary-color)!important;
+        border-radius: 0px !important;
+        color: var(--primary-text-color) !important;
+        font-weight: bold !important;
+     }
+    .sidebarMenu li.active ha-icon {
+        color: var(--primary-text-color) !important;
+     }
+    .clock {
+        width: 60% !important;
+        padding-top: 60% !important;
+        margin: -10px 50px 10px 50px !important;
+    }
+    .digitalClock {
+        padding-bottom: 5px;
+        padding-top: 15px;
+        color: var(--primary-text-color) !important;
+        opacity: 0.6;
+        font-size: 60px !important;
+        font-weight: 500 !important;
+        font-family: Arial Rounded MT;
+        letter-spacing: -0.05vw !important;
+        text-align: center;
+    }
+    .date {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: var(--primary-text-color);
+        opacity: 0.6;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: -0.05vw;
+    }
+    .template li {
+        color: var(--primary-text-color) !important;
+        font-size: 1.1vw !important;
+        font-weight: 200 !important;
+        opacity: 0.6;
+        letter-spacing: -0.05vw !important;
+        text-align: center;
+    }
+
+#------------------------------------------------------------
+## Swipe Navigation
+#------------------------------------------------------------
+swipe_nav:
+  wrap: true # mit 'true' wird von der letzten zur ersten Seite geswiped
+  enable_mouse_swipe: true # true, um mit der Maus zu navigieren
+  animate: fade # Alternative Animationen sind: swipe und flip
+  animate_duration: 300 # Dauer der Animation
+  prevent_default: false # Verhindert mit 'true' die sstandardmäßigen horizontalen Wischaktionen
+  swipe_amount: 10 # Länge des Wischens in % um die Seite zu wechseln

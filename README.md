@@ -15,5 +15,7 @@ Beispiel:
 | Sidbar Card | https://github.com/DBuit/sidebar-card.git |
 | Swipe Navigaton | https://github.com/zanna-37/hass-swipe-navigation.git |
 | Button Cartd | https://github.com/custom-cards/button-card.git |
+| Card Mod | https://github.com/thomasloven/lovelace-card-mod.git |
 | Clock Weather Card | https://github.com/pkissling/clock-weather-card.git |
+| Vertical Stack in Card | https://github.com/ofekashery/vertical-stack-in-card.git |
 | Caule Themes | https://github.com/MaxxKra/caule-themes-pack-1.git |
