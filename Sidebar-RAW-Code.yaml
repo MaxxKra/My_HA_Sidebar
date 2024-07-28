@@ -56,44 +56,44 @@ sidebar:
 #------------------------------------------------------------
 ## Sensor-Werte Anzeige
 #------------------------------------------------------------
-  template: >
-    <li>
-      {% if now().hour  < 5 %} Gute Nacht {{'\U0001F634'}} 
+  template: |
+    <li id="greeting">
+      {# Überprüft die aktuelle Stunde und gibt eine entsprechende Begrüßung aus #}
+      {% if now().hour < 5 %} Gute Nacht {{'\U0001F634'}}
       {% elif now().hour < 12 %} Guten Morgen {{'\u2615\uFE0F'}}
       {% elif now().hour < 18 %} Guten Tag {{'\U0001F44B\U0001F3FB'}}
       {% else %} Guten Abend {{'\U0001F44B\U0001F3FB'}}{% endif %}
-
     </li>
+    <div class="status">
+      {# Überprüft den Status des Sensors für die Anzahl der eingeschalteten Lampen #}
+      {% if states('sensor.zahler_lights_gesamt') | float == 0 %}
+        <li class="lights-off">Es sind keine Lampen an!</li>
+      {% elif states('sensor.zahler_lights_gesamt') | float == 1 %}
+        <li class="one-light">Es ist eine Lampe an!</li>
+      {% else %}
+        <li class="multiple-lights">Es sind {{states('sensor.zahler_lights_gesamt')}} Lampen an!</li>
+      {% endif %}
 
-    {% if states('sensor.zahler_lights_gesamt') | float == 0 %} <li>Es sind
-    keine Lampen an!</li> {% endif %}
-
-    {% if states('sensor.zahler_lights_gesamt') | float == 1 %} <li>Es ist eine
-    Lampe an!</li> {% endif %}
-
-    {% if states('sensor.zahler_lights_gesamt') | float > 1 %} <li>Es sind
-    {{states('sensor.zahler_lights_gesamt')}} Lampen an!</li> {% endif %}
-
-    {% if states('sensor.zahler_schalter_gesamt') | float == 0 %} <li>Es sind
-    keine Schalter eingeschaltet!</li> {% endif %}
-
-    {% if states('sensor.zahler_schalter_gesamt') | float == 1 %} <li>Es ist ein
-    Schalter eingeschaltet!</li> {% endif %}
-
-    {% if states('sensor.zahler_schalter_gesamt') | float > 1 %} <li>Es sind
-    {{states('sensor.zahler_schalter_gesamt')}} Schalter eingeschaltet!</li> {%
-    endif %}
+      {# Überprüft den Status des Sensors für die Anzahl der eingeschalteten Schalter #}
+      {% if states('sensor.zahler_schalter_gesamt') | float == 0 %}
+        <li class="switches-off">Es sind keine Schalter eingeschaltet!</li>
+      {% elif states('sensor.zahler_schalter_gesamt') | float == 1 %}
+        <li class="one-switch">Es ist ein Schalter eingeschaltet!</li>
+      {% else %}
+        <li class="multiple-switches">Es sind {{states('sensor.zahler_schalter_gesamt')}} Schalter eingeschaltet!</li>
+      {% endif %}
+    </div>
 
 #------------------------------------------------------------
 ## Untere Karten
 #------------------------------------------------------------
   bottomCard:
-    type: custom:vertical-stack-in-card
+    type: custom:vertical-stack-in-card # Alternativer vertikaler Stapel zum vertical-stack 
     card_mod:
       style: |
         ha-card {
-          border: none;
-          background: transparent;
+          border: none; /* Entfernt den Rahmen der Karte */
+          background: transparent; /* Setzt den Hintergrund der Karte auf transparent */
         }
     cardOptions:
       cards:
@@ -105,9 +105,9 @@ sidebar:
           card_mod:
             style: |
               ha-card {
-                background: transparent;
+                background: transparent; /* Setzt den Hintergrund der Wetterkarte auf transparent */
               }
-        - type: custom:button-card
+        - type: custom:button-card # Der Schalter zum Vollbild ein/aus schalten
           entity: switch.vollbild_touch_pc
           show_state: false
           show_icon: true
@@ -117,14 +117,14 @@ sidebar:
           size: 15%
           styles:
             card:
-              - background: transparent
+              - background: transparent; /* Setzt den Hintergrund der Schaltflächenkarte auf transparent */
     cardStyle: |
       :host {
-        width: 100%;
+        width: 100%; /* Setzt die Breite des Hosts auf 100% */
       }
       ha-card {
-        border: none;
-        background: transparent;
+        border: none; /* Entfernt den Rahmen der Karte */
+        background: transparent; /* Setzt den Hintergrund der Karte auf transparent */
       }
 
 #------------------------------------------------------------
@@ -132,71 +132,96 @@ sidebar:
 #------------------------------------------------------------
   style: |
     :host {
-        --sidebar-background: var(--primary-background-color);
-        --sidebar-text-color: var(--primary-text-color);
-        --border-radius: 5px;
-        --face-color: var(--primary-text-color);
-        --face-border-color: var(--primary-text-color);
-        --clock-hands-color: var(--primary-background-color);
-        --clock-seconds-hand-color: var(--primary-color);
-        --clock-middle-background: var(--primary-text-color);
-        --clock-middle-border: var(--primary-background-color);
-        box-shadow: inset -19px -1px 5px -14px var(--divider-color);
-        border-radius: 15px 0px 0px 15px;
+        --sidebar-background: var(--primary-background-color); /* Setzt die Hintergrundfarbe der Seitenleiste */
+        --sidebar-text-color: var(--primary-text-color); /* Setzt die Textfarbe der Seitenleiste */
+        --border-radius: 5px; /* Definiert den Radius der Rahmen-Ecken */
+        --face-color: var(--primary-text-color); /* Farbe des Ziffernblatts */
+        --face-border-color: var(--primary-text-color); /* Rahmenfarbe des Ziffernblatts */
+        --clock-hands-color: var(--primary-background-color); /* Farbe der Uhrzeiger */
+        --clock-seconds-hand-color: var(--primary-color); /* Farbe des Sekundenzeigers */
+        --clock-middle-background: var(--primary-text-color); /* Hintergrundfarbe der Mitte der Uhr */
+        --clock-middle-border: var(--primary-background-color); /* Rahmenfarbe der Mitte der Uhr */
+        box-shadow: inset -19px -1px 5px -14px var(--divider-color); /* Schatteneffekt innerhalb des Elements */
+        border-radius: 15px 0px 0px 15px; /* Radius der Rahmen-Ecken der Seitenleiste */
     }
     #customSidebar {
-       z-index: 9999!important;
-     }
+        z-index: 9999!important; /* Setzt den z-index der benutzerdefinierten Seitenleiste */
+    }
     .sidebarMenu li {
-        line-height: 35px!important;
-        color: var(--primary-text-color)!important;
-     }
+        line-height: 35px!important; /* Zeilenhöhe der Listenelemente in der Seitenleiste */
+        color: var(--primary-text-color)!important; /* Textfarbe der Listenelemente in der Seitenleiste */
+    }
     .bottom {
-        width: 100% !important;
+        width: 100% !important; /* Setzt die Breite des unteren Bereichs */
     }
     .sidebarMenu li.active {
-        background-color: var(--primary-color)!important;
-        border-radius: 0px !important;
-        color: var(--primary-text-color) !important;
-        font-weight: bold !important;
-     }
+        background-color: var(--primary-color)!important; /* Hintergrundfarbe des aktiven Listenelements in der Seitenleiste */
+        border-radius: 0px !important; /* Setzt den Radius der Rahmen-Ecken des aktiven Listenelements */
+        color: var(--primary-text-color) !important; /* Textfarbe des aktiven Listenelements */
+        font-weight: bold !important; /* Fettschrift für das aktive Listenelement */
+    }
     .sidebarMenu li.active ha-icon {
-        color: var(--primary-text-color) !important;
-     }
+        color: var(--primary-text-color) !important; /* Textfarbe des Icons im aktiven Listenelement */
+    }
     .clock {
-        width: 60% !important;
-        padding-top: 60% !important;
-        margin: -10px 50px 10px 50px !important;
+        width: 60% !important; /* Setzt die Breite der Uhr */
+        padding-top: 60% !important; /* Setzt den oberen Innenabstand der Uhr */
+        margin: -10px 50px 10px 50px !important; /* Setzt die äußeren Abstände der Uhr */
     }
     .digitalClock {
-        padding-bottom: 5px;
-        padding-top: 15px;
-        color: var(--primary-text-color) !important;
-        opacity: 0.6;
-        font-size: 60px !important;
-        font-weight: 500 !important;
-        font-family: Arial Rounded MT;
-        letter-spacing: -0.05vw !important;
-        text-align: center;
+        padding-bottom: 5px; /* Setzt den unteren Innenabstand der digitalen Uhr */
+        padding-top: 15px; /* Setzt den oberen Innenabstand der digitalen Uhr */
+        color: var(--primary-text-color) !important; /* Textfarbe der digitalen Uhr */
+        opacity: 0.6; /* Setzt die Transparenz der digitalen Uhr */
+        font-size: 60px !important; /* Schriftgröße der digitalen Uhr */
+        font-weight: 500 !important; /* Fettschrift für die digitale Uhr */
+        font-family: Arial Rounded MT; /* Schriftart der digitalen Uhr */
+        letter-spacing: -0.05vw !important; /* Buchstabenabstand der digitalen Uhr */
+        text-align: center; /* Zentrierung des Textes der digitalen Uhr */
     }
     .date {
-        padding-bottom: 10px;
-        padding-top: 10px;
-        color: var(--primary-text-color);
-        opacity: 0.6;
-        font-size: 25px;
-        font-weight: 300;
-        text-align: center;
-        letter-spacing: -0.05vw;
+        padding-bottom: 10px; /* Setzt den unteren Innenabstand des Datums */
+        padding-top: 10px; /* Setzt den oberen Innenabstand des Datums */
+        color: var(--primary-text-color); /* Textfarbe des Datums */
+        opacity: 0.6; /* Setzt die Transparenz des Datums */
+        font-size: 25px; /* Schriftgröße des Datums */
+        font-weight: 300; /* Schriftgewicht des Datums */
+        text-align: center; /* Zentrierung des Textes des Datums */
+        letter-spacing: -0.05vw; /* Buchstabenabstand des Datums */
     }
     .template li {
-        color: var(--primary-text-color) !important;
-        font-size: 1.1vw !important;
-        font-weight: 200 !important;
-        opacity: 0.6;
-        letter-spacing: -0.05vw !important;
-        text-align: center;
+        color: var(--primary-text-color) !important; /* Textfarbe der Listenelemente der Vorlage */
+        font-size: 1.1vw !important; /* Schriftgröße der Listenelemente der Vorlage */
+        font-weight: 200 !important; /* Schriftgewicht der Listenelemente der Vorlage */
+        opacity: 0.6; /* Setzt die Transparenz der Listenelemente der Vorlage */
+        letter-spacing: -0.05vw !important; /* Buchstabenabstand der Listenelemente der Vorlage */
+        text-align: center; /* Zentrierung des Textes der Listenelemente der Vorlage */
+        margin-bottom: 10px !important; /* Setzt die unteren Außenabstände der Listenelemente der Vorlage */
     }
+    .template li.one-light {
+        color: orange !important; /* Textfarbe des Listenelements für eine eingeschaltete Lampe */
+        font-weight: bold !important; /* Fettschrift für das Listenelement für eine eingeschaltete Lampe */
+    }
+    .template li.multiple-lights {
+        color: red !important; /* Textfarbe des Listenelements für mehrere eingeschaltete Lampen */
+        font-weight: bold !important; /* Fettschrift für das Listenelement für mehrere eingeschaltete Lampen */
+    }
+    .template li.one-switch {
+        color: orange !important; /* Textfarbe des Listenelements für einen eingeschalteten Schalter */
+        font-weight: bold !important; /* Fettschrift für das Listenelement für einen eingeschalteten Schalter */
+    }
+    .template li.multiple-switches {
+        color: red !important; /* Textfarbe des Listenelements für mehrere eingeschaltete Schalter */
+        font-weight: bold !important; /* Fettschrift für das Listenelement für mehrere eingeschaltete Schalter */
+    }
+    .status {
+        padding: 10px; /* Setzt den Innenabstand der Statusanzeige */
+        background-color: var(--sidebar-background); /* Hintergrundfarbe der Statusanzeige */
+        border-radius: var(--border-radius); /* Radius der Rahmen-Ecken der Statusanzeige */
+        text-align: center; /* Zentrierung des Textes der Statusanzeige */
+    }
+
+
 
 #------------------------------------------------------------
 ## Swipe Navigation
