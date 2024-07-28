@@ -2,6 +2,11 @@
 
 Um alle aktiven Entitäten zählen zu können, habe ich bei meinen Templates zwei Sensoren angelegt, welche mir alle aktiven Lampen also `light` Entitäten und Schalter also `switch` Entitäten anzeigt.
 
+![EntityCounter1](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Entity_Counter_1.jpg)
+![EntityCounter2](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Entity_Counter_2.jpg)
+
+Man kann mit `rejectattr` auch Entitäten ausnehmen, wenn diese nicht mitgezählt werden sollen.
+In meinem Fall betrifft das meinen Monitor welcher als `light.shb_pc_vivaldi_screen` , sowie den Vollbild-Schalter welcher als `switch.vollbild_touch_pc` angezeigt wird. 
 
 
 ```yaml
