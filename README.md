@@ -19,3 +19,11 @@ Beispiel:
 | Clock Weather Card | https://github.com/pkissling/clock-weather-card.git | /hacs/repository/522634019 |
 | Vertical Stack in Card | https://github.com/ofekashery/vertical-stack-in-card.git | /hacs/repository/142051833 |
 | Caule Themes | https://github.com/MaxxKra/caule-themes-pack-1.git | /hacs/repository/797533022 |
+
+
+<br>
+
+
+## Erstellung in Schritten:
+
+### Schritt :one:
