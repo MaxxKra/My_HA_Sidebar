@@ -27,3 +27,19 @@ Beispiel:
 ## Erstellung in Schritten:
 
 ### Schritt :one:
+
+
+Erstelle dein Dashboard in Home Assistant mit mehreren Seiten und stelle dabei sicher, dass jede Seite eine eigene URL hat.
+Das Layout (Grid, Panel, Horizontal, Vertical, usw...) spielt dabei keine Rolle.
+
+In meinem Fall sind die Seiten meines `dashboard-Sidebar` auf folgende Namen und URL´s aufgeteilt:
+
+| **NAME** | **URL** | **ANSICHTSART** |
+| --- | --- | --- |
+| Floorplan | /dashboard-sidebar/floorplan | Panel (1 Karte) |
+| Übersicht | /dashboard-sidebar/ubersicht | Abschnitte (experimentell) |
+| Alles Müll | /dashboard-sidebar/alles-mull | Panel (1 Karte) |
+| Geburtstage | /dashboard-sidebar/geburtstage | Grid (layout-card) |
+
+
+### Schritt :two:
