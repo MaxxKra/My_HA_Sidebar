@@ -116,7 +116,7 @@ Code Erklärung:
 5. Sidebar Menü
     - Je Dashboard-Seite ein Eintrag
     - Den Pfad (URL) der Dashboard Seite angeben
-    - der am Button dargestellte name
+    - der am Button dargestellte Name
     - angeben ob der Button als aktiv gekennzeichnet sein soll
     - ein Icon für die Seite am Button auswählen
 
@@ -141,18 +141,18 @@ Nun folgen die Anaben für das Design bzw. die Darstellungen.
 Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.
 
 Im Einzelnen sind die Abschnitte:
-    - :host = die Grundeinstellungen der Sidebar im Allgemeinen
-    - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz oben dargestellt wird
-    - .sidebarMenu li = Zeilenhöhe und Farbe der Navigation Buttons
-    - .bottom = die Breite der unteren Karten im Bezug zur Sidebar
-    - .sidebarMenu li.active = die Darstellung der Navigation Buttons wenn ausgewählt
-    - .sidebarMenu li.active ha-icon = die Darstellung des Icons wenn der Button ausgewählt ist
-    - .clock = Position und Größe der analogen Uhr
-    - .digitalClock = Position, Größe und Schrift der digitalen Uhr
-    - .date = Position, Größe und Schrift des Datum
-    - .template li = Darstellung der Template Sektion allgemein
-    - .template li.one-light = Farbe und Schrift des Lampen Templates bei 1 aktiven Lampe
-    - .template li.multiple-lights = Farbe und Schrift des Lampen Templates bei mehreren aktiven Lampen
-    - .template li.one-switch = Farbe und Schrift des Lampen Templates bei 1 aktiven Schalter
-    - .template li.multiple-switches = Farbe und Schrift des Lampen Templates bei mehreren aktiven Schaltern
-    - .status = Position und Farbe der Status Anzeige
+  - :host = die Grundeinstellungen der Sidebar im Allgemeinen
+  - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz oben dargestellt wird
+  - .sidebarMenu li = Zeilenhöhe und Farbe der Navigation Buttons
+  - .bottom = die Breite der unteren Karten im Bezug zur Sidebar
+  - .sidebarMenu li.active = die Darstellung der Navigation Buttons wenn ausgewählt
+  - .sidebarMenu li.active ha-icon = die Darstellung des Icons wenn der Button ausgewählt ist
+  - .clock = Position und Größe der analogen Uhr
+  - .digitalClock = Position, Größe und Schrift der digitalen Uhr
+  - .date = Position, Größe und Schrift des Datum
+  - .template li = Darstellung der Template Sektion allgemein
+  - .template li.one-light = Farbe und Schrift des Lampen Templates bei 1 aktiven Lampe
+  - .template li.multiple-lights = Farbe und Schrift des Lampen Templates bei mehreren aktiven Lampen
+  - .template li.one-switch = Farbe und Schrift des Lampen Templates bei 1 aktiven Schalter
+  - .template li.multiple-switches = Farbe und Schrift des Lampen Templates bei mehreren aktiven Schaltern
+  - .status = Position und Farbe der Status Anzeige
