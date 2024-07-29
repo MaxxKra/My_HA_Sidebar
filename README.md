@@ -137,20 +137,22 @@ In diesen vertikalen Stapel habe ich eine Wetterkarte und den Schalter für den 
 
 8. **Einstellungen Farben, Schriften, Hintergründe**
 Nun folgen die Anaben für das Design bzw. die Darstellungen.<br>
+
 Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.<br>
-Im Einzelnen sind die Abschnitte:
-  - :host = die Grundeinstellungen der Sidebar im Allgemeinen
-  - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz vorne dargestellt wird
-  - .sidebarMenu li = Zeilenhöhe und Farbe der Navigation Buttons
-  - .bottom = die Breite der unteren Karten im Bezug zur Sidebar
-  - .sidebarMenu li.active = die Darstellung der Navigation Buttons wenn ausgewählt
-  - .sidebarMenu li.active ha-icon = die Darstellung des Icons wenn der Button ausgewählt ist
-  - .clock = Position und Größe der analogen Uhr
-  - .digitalClock = Position, Größe und Schrift der digitalen Uhr
-  - .date = Position, Größe und Schrift des Datum
-  - .template li = Darstellung der Template Sektion allgemein
-  - .template li.one-light = Farbe und Schrift des Lampen Templates bei 1 aktiven Lampe
-  - .template li.multiple-lights = Farbe und Schrift des Lampen Templates bei mehreren aktiven Lampen
-  - .template li.one-switch = Farbe und Schrift des Lampen Templates bei 1 aktiven Schalter
-  - .template li.multiple-switches = Farbe und Schrift des Lampen Templates bei mehreren aktiven Schaltern
-  - .status = Position und Farbe der Status Anzeige
+
+- Im Einzelnen sind die Abschnitte:
+    - :host = die Grundeinstellungen der Sidebar im Allgemeinen
+    - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz vorne dargestellt wird
+    - .sidebarMenu li = Zeilenhöhe und Farbe der Navigation Buttons
+    - .bottom = die Breite der unteren Karten im Bezug zur Sidebar
+    - .sidebarMenu li.active = die Darstellung der Navigation Buttons wenn ausgewählt
+    - .sidebarMenu li.active ha-icon = die Darstellung des Icons wenn der Button ausgewählt ist
+    - .clock = Position und Größe der analogen Uhr
+    - .digitalClock = Position, Größe und Schrift der digitalen Uhr
+    - .date = Position, Größe und Schrift des Datum
+    - .template li = Darstellung der Template Sektion allgemein
+    - .template li.one-light = Farbe und Schrift des Lampen Templates bei 1 aktiven Lampe
+    - .template li.multiple-lights = Farbe und Schrift des Lampen Templates bei mehreren aktiven Lampen
+    - .template li.one-switch = Farbe und Schrift des Lampen Templates bei 1 aktiven Schalter
+    - .template li.multiple-switches = Farbe und Schrift des Lampen Templates bei mehreren aktiven Schaltern
+    - .status = Position und Farbe der Status Anzeige
