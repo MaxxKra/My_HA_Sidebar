@@ -156,3 +156,7 @@ Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen
     - .template li.one-switch = Farbe und Schrift des Lampen Templates bei 1 aktiven Schalter
     - .template li.multiple-switches = Farbe und Schrift des Lampen Templates bei mehreren aktiven Schaltern
     - .status = Position und Farbe der Status Anzeige
+
+
+9. **Anmerkungen**
+Ein kleines Manko ist, dass die Sidebar leider nicht das Theme der jeweiligen Seite übernimmt, sondern nur das der allgemeinen Einstellung aus dem Profil. Ich habe das mit einem Auswahl-Helfer und einer Automatisierung gelöst, in dem ich das Theme je nach Eintrag des Helfers in HA komplett einstelle.
