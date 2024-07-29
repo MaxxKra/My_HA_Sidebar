@@ -136,10 +136,8 @@ In diesen vertikalen Stapel habe ich eine Wetterkarte und den Schalter für den 
 
 
 8. **Einstellungen Farben, Schriften, Hintergründe**
-Nun folgen die Anaben für das Design bzw. die Darstellungen.<br>
-
-Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.<br>
-
+Nun folgen die Anaben für das Design bzw. die Darstellungen.<br><br>
+Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.<br><br>
 - Im Einzelnen sind die Abschnitte:
     - :host = die Grundeinstellungen der Sidebar im Allgemeinen
     - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz vorne dargestellt wird
