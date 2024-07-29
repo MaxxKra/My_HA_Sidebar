@@ -93,27 +93,27 @@ Im nächsten Schritt wird die Sidebar erstellt. Dazu kannst du dir aus der Datei
 
 Code Erklärung:
 
-1. Grundeinstellungen
+1. **Grundeinstellungen**
     - verstecken der Titelleiste
     - verstecken der Seitenleiste
     - Breite der Sidebar
 
 
-2. Digitale Uhr
+2. **Digitale Uhr**
     - Auswählen ob die digitale Uhr verwendet wird
     - Digitale Uhr mit oder ohne Sekunden
 
 
-3. Analoge Uhr
+3. **Analoge Uhr**
     - Auswählen ob die analoge Uhr verwendet wird
 
 
-4. Datum
+4. **Datum**
    - Auswählen ob das Datum angezeigt werden soll
    - Eingabe des Dastumsformat (z.B. dddd, DD. MMMM YYYY = Montag, 31.Dezember 2024)
 
 
-5. Sidebar Menü
+5. **Sidebar Menü**
     - Je Dashboard-Seite ein Eintrag
     - Den Pfad (URL) der Dashboard Seite angeben
     - der am Button dargestellte Name
@@ -121,7 +121,7 @@ Code Erklärung:
     - ein Icon für die Seite am Button auswählen
 
 
-6. Sensor Werte Anzeige
+6. **Sensor Werte Anzeige**
 Dies ist die Template Sektion, in welcher eine Begrüßeung sowie Sensor Werte angezeigt werden können.
 In meinem Fall:
    - Begrüßung Tageszeitabhängig
@@ -129,17 +129,15 @@ In meinem Fall:
    - Anzahl der aktiven Schalter
 
 
-7. Untere Karte
+7. **Untere Karte**
 Hier kann eine bzw. mehrere Karten ganz unten in der Sidebar angezeigt werden und ist somit immer sichtbar.
 Ich habe mich für einen vertikalen Stapel mit Hilfe der `custom:vertical-stack-in-card` Integration entschieden.
 In diesen vertikalen Stapel habe ich eine Wetterkarte und den Schalter für den Vollbildmodus eingefügt.
 
 
-8. Einstellungen Farben, Schriften, Hintergründe
-Nun folgen die Anaben für das Design bzw. die Darstellungen.
-
-Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.
-
+8. **Einstellungen Farben, Schriften, Hintergründe**
+Nun folgen die Anaben für das Design bzw. die Darstellungen.<br>
+Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.<br>
 Im Einzelnen sind die Abschnitte:
   - :host = die Grundeinstellungen der Sidebar im Allgemeinen
   - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz vorne dargestellt wird
