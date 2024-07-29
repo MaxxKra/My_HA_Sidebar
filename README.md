@@ -142,7 +142,7 @@ Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen
 
 Im Einzelnen sind die Abschnitte:
   - :host = die Grundeinstellungen der Sidebar im Allgemeinen
-  - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz oben dargestellt wird
+  - #customSidebar = der Z Index welcher sicherstellt, dass die Sidebar ganz vorne dargestellt wird
   - .sidebarMenu li = Zeilenhöhe und Farbe der Navigation Buttons
   - .bottom = die Breite der unteren Karten im Bezug zur Sidebar
   - .sidebarMenu li.active = die Darstellung der Navigation Buttons wenn ausgewählt
