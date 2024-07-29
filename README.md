@@ -122,11 +122,13 @@ Code Erklärung:
 
 
 6. **Sensor Werte Anzeige**
-Dies ist die Template Sektion, in welcher eine Begrüßeung sowie Sensor Werte angezeigt werden können.
+Dies ist die Template Sektion, in welcher eine Begrüßung sowie Sensor Werte angezeigt werden können.
 In meinem Fall:
    - Begrüßung Tageszeitabhängig
    - Anzahl der aktiven Lampen
    - Anzahl der aktiven Schalter
+
+Wie ich die Templates für die aktiven Lampen und Schalte in Home Assistant angelegt habe, kann man unter `SENSOR_ENTITY_COUNTER.md` nachlesen und sich den Code kopieren.
 
 
 7. **Untere Karte**
