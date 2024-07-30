@@ -134,6 +134,7 @@ Code Erklärung:
 
 
 6. **Sensor Werte Anzeige**
+
 Dies ist die Template Sektion, in welcher eine Begrüßung sowie Sensor Werte angezeigt werden können.
 In meinem Fall:
    - Begrüßung Tageszeitabhängig
@@ -144,12 +145,14 @@ Wie ich die Templates für die aktiven Lampen und Schalte in Home Assistant ange
 
 
 7. **Untere Karte**
+
 Hier kann eine bzw. mehrere Karten ganz unten in der Sidebar angezeigt werden und ist somit immer sichtbar.
 Ich habe mich für einen vertikalen Stapel mit Hilfe der `custom:vertical-stack-in-card` Integration entschieden.
 In diesen vertikalen Stapel habe ich eine Wetterkarte und den Schalter für den Vollbildmodus eingefügt.
 
 
 8. **Einstellungen Farben, Schriften, Hintergründe**
+
 Nun folgen die Anaben für das Design bzw. die Darstellungen.<br><br>
 Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen herumspiet um die Aufgabe der jeweiligen Angaben besser kennen zu lernen.<br><br>
 - Im Einzelnen sind die Abschnitte:
@@ -171,4 +174,5 @@ Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen
 
 
 9. **Anmerkungen**
+
 Ein kleines Manko ist, dass die Sidebar leider nicht das Theme der jeweiligen Seite übernimmt, sondern nur das der allgemeinen Einstellung aus dem Profil. Ich habe das mit einem Auswahl-Helfer und einer Automatisierung gelöst, in dem ich das Theme je nach Eintrag des Helfers in HA komplett einstelle.
