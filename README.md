@@ -2,7 +2,7 @@
 Hier findest du alle Informationen um meine Sidebar nachzubauen.
 
 <br>
-
+Beispiel:
 ![Beispiel](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Sidebar.gif)
 
 <br>
@@ -34,7 +34,6 @@ Das Layout (Grid, Panel, Horizontal, Vertical, usw...) spielt dabei keine Rolle.
 
 <br>
 
-Beispiel:
 ![Beispiel](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Dashboard_Seiten.jpg)
 
 <br>
