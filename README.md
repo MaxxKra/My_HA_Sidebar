@@ -101,7 +101,7 @@ Es gibt jede Menge Einstellungsmöglichkeiten, welche in der Dokumentation nachz
 ### Schritt :four: - Sidebar erstellen
 
 
-Im nächsten Schritt wird die Sidebar erstellt. Dazu kannst du dir aus der Datei `Sidebar-RAW-Code.yaml` den Code kopieren und in deinen RAW Konfigurationseditor ganz oben einfügen.
+Im nächsten Schritt wird die Sidebar erstellt. Dazu kannst du dir aus der Datei [`Sidebar-RAW-Code.yaml`]https://github.com/MaxxKra/My_HA_Sidebar/blob/aa810088ae622b1fb6ef183465423d6402f6f69e/Sidebar-RAW-Code.yaml den Code kopieren und in deinen RAW Konfigurationseditor ganz oben einfügen.
 
 Code Erklärung:
 
