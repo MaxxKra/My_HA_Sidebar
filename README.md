@@ -55,6 +55,12 @@ In meinem Fall sind die Seiten meines `dashboard-Sidebar` auf folgende Namen und
 Für den Vollbildmodus verwende ich gerne den Kiosk Mode, auch wenn das Ausblenden der Seiten- und Titel- Leiste ebenso mit der Sidebar Card funktionieren würde.
 Durch den Kiosk Mode und dem dazu angelegten Helfer habe ich die Möglichkeit, einen Schalter am Dashboard zu positionieren, mit welchem ich das Vollbild ein bzw. ausschalten kann.
 
+<br>
+
+<img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Vollbild_Schalter.gif" alt="Example" width="600"/>
+
+<br>
+
 Den Kiosk-Mode habe ich in HACS installiert und mit folgendem Code im RAW Konfigurationseditor eingerichtet:
 
 
