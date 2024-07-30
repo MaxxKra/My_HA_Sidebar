@@ -33,6 +33,13 @@ Beispiel:
 Erstelle dein Dashboard in Home Assistant mit mehreren Seiten und stelle dabei sicher, dass jede Seite eine eigene URL hat.
 Das Layout (Grid, Panel, Horizontal, Vertical, usw...) spielt dabei keine Rolle.
 
+<br>
+
+Beispiel:
+![Beispiel](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Dashboard_Seiten.jpg)
+
+<br>
+
 In meinem Fall sind die Seiten meines `dashboard-Sidebar` auf folgende Namen und URL´s aufgeteilt:
 
 | **NAME** | **URL** | **ANSICHTSART** |
