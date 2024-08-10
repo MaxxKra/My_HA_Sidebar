@@ -29,11 +29,11 @@ Beispiel:
 </p>
 <p align="center">
   <a href="https://www.buymeacoffee.com/bastler">
-    <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/buy_me_a_coffee_logo.png" alt="Buy Me A Coffee">
+    <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/buy_me_a_coffee_logo.png" alt="Buy Me A Coffee" width="150">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.paypal.me/kramlmaxx">
-    <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/paypal_donate_logo.png" alt="PayPal Donate">
+    <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/paypal_donate_logo.png" alt="PayPal Donate" width="150">
   </a>
 </p>
 
