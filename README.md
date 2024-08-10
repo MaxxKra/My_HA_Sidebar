@@ -8,23 +8,6 @@ Beispiel:
 
 <br>
 
-### <p align="center">Wenn du Interesse daran hast, mich, meinen Kanal oder meine kreative Arbeit zu unterstützen,<br>freue ich mich über jeglichen Support:
-</p>
-<p align="center">
-  <a href="https://www.buymeacoffee.com/bastler">
-    <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.paypal.me/kramlmaxx">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal Donate">
-  </a>
-</p>
-
-### <p align="center">Danke</p>
-
-<br>
-
-
 ## Verwendete HACS Integrationen:
 
 | **TYPE** | **LINK** | **HACS PFAD** |
@@ -41,6 +24,22 @@ Beispiel:
 
 <br>
 
+
+### <p align="center">Wenn du Interesse daran hast, mich, meinen Kanal oder meine kreative Arbeit zu unterstützen,<br>freue ich mich über jeglichen Support:
+</p>
+<p align="center">
+  <a href="https://www.buymeacoffee.com/bastler">
+    <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.paypal.me/kramlmaxx">
+    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal Donate">
+  </a>
+</p>
+
+### <p align="center">Danke</p>
+
+<br>
 
 ## Erstellung in Schritten:
 
