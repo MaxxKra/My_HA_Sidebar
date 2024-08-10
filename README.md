@@ -35,6 +35,10 @@ Beispiel:
   <a href="https://www.paypal.me/kramlmaxx">
     <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/paypal_donate_logo.png" alt="PayPal Donate" width="150">
   </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.amazon.de/hz/wishlist/ls/3FT7MNGRVOTM3?ref_=wl_share">
+    <img src="https://raw.githubusercontent.com/MaxxKra/README_images/master/Allgemein/amazon_wishlist_logo.png" alt="Amazon Wishlist" width="150">
+  </a>
 </p>
 
 ### <p align="center">Danke</p>
