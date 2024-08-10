@@ -60,7 +60,7 @@ sidebar:
     <li id="greeting">
       {# Überprüft die aktuelle Stunde und gibt eine entsprechende Begrüßung aus #}
       {% if now().hour < 5 %} Gute Nacht {{'\U0001F634'}}
-      {% elif now().hour < 12 %} Guten Morgen {{'\u2615\uFE0F'}}
+      {% elif now().hour < 9 %} Guten Morgen {{'\u2615\uFE0F'}}
       {% elif now().hour < 18 %} Guten Tag {{'\U0001F44B\U0001F3FB'}}
       {% else %} Guten Abend {{'\U0001F44B\U0001F3FB'}}{% endif %}
     </li>
@@ -117,7 +117,7 @@ sidebar:
           size: 15%
           styles:
             card:
-              - background: transparent; /* Setzt den Hintergrund der Schaltflächenkarte auf transparent */
+              - background: transparent; # Setzt den Hintergrund der Schaltflächenkarte auf transparent
     cardStyle: |
       :host {
         width: 100%; /* Setzt die Breite des Hosts auf 100% */

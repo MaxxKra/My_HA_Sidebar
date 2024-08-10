@@ -1,0 +1,191 @@
+sidebar:
+  hideTopMenu: false
+  hideHassSidebar: false
+  width:
+    desktop: 18
+  digitalClock: true
+  digitalClockWithSeconds: false
+  clock: true
+  date: true
+  dateFormat: dddd, DD. MMMM YYYY
+  sidebarMenu:
+    - action: navigate
+      navigation_path: /dashboard-sidebar/floorplan
+      name: Floorplan
+      active: true
+      icon: mdi:floor-plan
+    - action: navigate
+      navigation_path: /dashboard-sidebar/ubersicht
+      name: Übersicht
+      active: true
+      icon: mdi:toggle-switch
+    - action: navigate
+      navigation_path: /dashboard-sidebar/alles-mull
+      name: Alles Müll
+      active: true
+      icon: mdi:trash-can
+    - action: navigate
+      navigation_path: /dashboard-sidebar/geburtstage
+      name: Geburtstage
+      active: true
+      icon: mdi:cake-variant-outline
+  template: |
+    <li id="greeting">
+      {% if now().hour < 5 %} Gute Nacht {{'\U0001F634'}}
+      {% elif now().hour < 9 %} Guten Morgen {{'\u2615\uFE0F'}}
+      {% elif now().hour < 18 %} Guten Tag {{'\U0001F44B\U0001F3FB'}}
+      {% else %} Guten Abend {{'\U0001F44B\U0001F3FB'}}{% endif %}
+    </li>
+    <div class="status">
+      {% if states('sensor.zahler_lights_gesamt') | float == 0 %}
+        <li class="lights-off">Es sind keine Lampen an!</li>
+      {% elif states('sensor.zahler_lights_gesamt') | float == 1 %}
+        <li class="one-light">Es ist eine Lampe an!</li>
+      {% else %}
+        <li class="multiple-lights">Es sind {{states('sensor.zahler_lights_gesamt')}} Lampen an!</li>
+      {% endif %}
+
+      {% if states('sensor.zahler_schalter_gesamt') | float == 0 %}
+        <li class="switches-off">Es sind keine Schalter eingeschaltet!</li>
+      {% elif states('sensor.zahler_schalter_gesamt') | float == 1 %}
+        <li class="one-switch">Es ist ein Schalter eingeschaltet!</li>
+      {% else %}
+        <li class="multiple-switches">Es sind {{states('sensor.zahler_schalter_gesamt')}} Schalter eingeschaltet!</li>
+      {% endif %}
+    </div>
+  bottomCard:
+    type: custom:vertical-stack-in-card
+    card_mod:
+      style: |
+        ha-card {
+          border: none;
+          background: transparent;
+        }
+    cardOptions:
+      cards:
+        - type: custom:clock-weather-card
+          entity: weather.smart_home_test
+          forecast_rows: 2
+          hide_clock: true
+          hide_date: true
+          card_mod:
+            style: |
+              ha-card {
+                background: transparent;
+              }
+        - type: custom:button-card
+          entity: switch.vollbild_touch_pc
+          show_state: false
+          show_icon: true
+          icon: mdi:arrow-expand
+          layout: icon_name
+          name: Vollbild
+          size: 15%
+          styles:
+            card:
+              - background: transparent
+    cardStyle: |
+      :host {
+        width: 100%;
+      }
+      ha-card {
+        border: none;
+        background: transparent;
+      }
+  style: |
+    :host {
+        --sidebar-background: var(--primary-background-color);
+        --sidebar-text-color: var(--primary-text-color);
+        --border-radius: 5px;
+        --face-color: var(--primary-text-color);
+        --face-border-color: var(--primary-text-color);
+        --clock-hands-color: var(--primary-background-color);
+        --clock-seconds-hand-color: var(--primary-color);
+        --clock-middle-background: var(--primary-text-color);
+        --clock-middle-border: var(--primary-background-color);
+        box-shadow: inset -19px -1px 5px -14px var(--divider-color);
+        border-radius: 15px 0px 0px 15px;
+    }
+    #customSidebar {
+        z-index: 9999!important;
+    }
+    .sidebarMenu li {
+        line-height: 35px!important;
+        color: var(--primary-text-color)!important;
+    }
+    .bottom {
+        width: 100% !important;
+    }
+    .sidebarMenu li.active {
+        background-color: var(--primary-color)!important;
+        border-radius: 0px !important;
+        color: var(--primary-text-color) !important;
+        font-weight: bold !important;
+    }
+    .sidebarMenu li.active ha-icon {
+        color: var(--primary-text-color) !important;
+    }
+    .clock {
+        width: 60% !important;
+        padding-top: 60% !important;
+        margin: -10px 50px 10px 50px !important;
+    }
+    .digitalClock {
+        padding-bottom: 5px;
+        padding-top: 15px;
+        color: var(--primary-text-color) !important;
+        opacity: 0.6;
+        font-size: 60px !important;
+        font-weight: 500 !important;
+        font-family: Arial Rounded MT;
+        letter-spacing: -0.05vw !important;
+        text-align: center;
+    }
+    .date {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: var(--primary-text-color);
+        opacity: 0.6;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: -0.05vw;
+    }
+    .template li {
+        color: var(--primary-text-color) !important;
+        font-size: 1.1vw !important;
+        font-weight: 200 !important;
+        opacity: 0.6;
+        letter-spacing: -0.05vw !important;
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+    .template li.one-light {
+        color: orange !important;
+        font-weight: bold !important;
+    }
+    .template li.multiple-lights {
+        color: red !important;
+        font-weight: bold !important;
+    }
+    .template li.one-switch {
+        color: orange !important;
+        font-weight: bold !important;
+    }
+    .template li.multiple-switches {
+        color: red !important;
+        font-weight: bold !important;
+    }
+    .status {
+        padding: 10px;
+        background-color: var(--sidebar-background);
+        border-radius: var(--border-radius);
+        text-align: center;
+    }
+swipe_nav:
+  wrap: true
+  enable_mouse_swipe: true
+  animate: fade
+  animate_duration: 300
+  prevent_default: false
+  swipe_amount: 10

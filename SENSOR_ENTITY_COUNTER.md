@@ -45,11 +45,12 @@ sensor:
     icon: mdi:lightbulb-question-outline
     state: >
       {{ states.light 
-         | rejectattr('attributes.entity_id', 'defined') 
-         | rejectattr('entity_id', 'in', ['light.shb_pc_vivaldi_screen']) 
-         | selectattr('state', 'eq', 'on') 
-         | list 
-         | count }}
+      | rejectattr('attributes.entity_id', 'defined') 
+      | rejectattr('entity_id', 'in', ['light.shb_pc_vivaldi_screen'])
+      | rejectattr('entity_id', 'in', ['light.shb_pc_firefox_screen']) 
+      | selectattr('state', 'eq', 'on') 
+      | list 
+      | count }}
 
   #-----------------------------------------------------------
   # Anzahl aktiver SCHALTER Entitäten
@@ -58,9 +59,9 @@ sensor:
     icon: mdi:help-network-outline
     state: >
       {{ states.switch 
-         | rejectattr('attributes.entity_id', 'defined') 
-         | rejectattr('entity_id', 'in', ['switch.vollbild_touch_pc']) 
-         | selectattr('state', 'eq', 'on') 
-         | list 
-         | count }}
+      | rejectattr('attributes.entity_id', 'defined') 
+      | rejectattr('entity_id', 'in', ['switch.vollbild_touch_pc']) 
+      | selectattr('state', 'eq', 'on') 
+      | list 
+      | count }}
 ```
