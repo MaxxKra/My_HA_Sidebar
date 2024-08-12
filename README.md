@@ -118,7 +118,23 @@ Es gibt jede Menge Einstellungsmöglichkeiten, welche in der Dokumentation nachz
 
 
 
-### Schritt :four: - Sidebar erstellen
+### Schritt :four: - Template Sensoren einrichten
+
+
+Um alle aktiven `light` und  `switch` Entitäten in der Sidebar anzuzeigen, habe ich in meinen Templates zwei Sensoren erstellt, welche diese zählen.
+
+<br>
+
+![EntityCounter1](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Entity_Counter_1.jpg)
+![EntityCounter2](https://raw.githubusercontent.com/MaxxKra/README_images/master/Sidebar/Entity_Counter_2.jpg)
+
+<br>
+
+
+Den Code für diese Templates, findest du [hier](https://github.com/MaxxKra/My_HA_Sidebar/blob/ae77ae1c922a8700634b7afdb881f73d9a9b3d01/SENSOR_ENTITY_COUNTER.md)
+
+
+### Schritt :five: - Sidebar erstellen
 
 
 Im nächsten Schritt wird die Sidebar erstellt. Dazu kannst du dir aus der Datei [`Sidebar-RAW-Code.yaml`](https://github.com/MaxxKra/My_HA_Sidebar/blob/aa810088ae622b1fb6ef183465423d6402f6f69e/Sidebar-RAW-Code.yaml) den Code kopieren und in deinen RAW Konfigurationseditor ganz oben einfügen.
