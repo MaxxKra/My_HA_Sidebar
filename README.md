@@ -100,7 +100,7 @@ kiosk_mode:
 Eine super Custom Integration ist die Home Assistant Swipe Navigation.
 
 Mit dieser hat man die Möglichkeit am Dashboard mit "wischen" zwischen den Seiten zu navigieren.
-Auch diese Integration ist in HACS zu installieren und ich habe sie mit folgendem Code im RAW Konfigurationseditor eingerichtet:
+Auch diese Integration ist in HACS zu installieren und ich habe sie mit folgendem Code im RAW Konfigurationseditor eingerichtet. In diesem Fall, ist der Code bei Schritt 5 mit dabei und du brauchst diesen nicht separat einrichten.
 
 
 ```yaml
