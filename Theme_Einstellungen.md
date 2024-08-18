@@ -2,13 +2,10 @@
 
 Damit ich das Theme nicht immer in meinem Profil ändern muss, habe ich einen Helfer angelegt, in welchen ich alle auszuwählenden Themes aufgelistet habe.
 
-Helfer: Dropdown
-
-Name: Themes
-
-Icon: mdi:format-paint
-
-Optionen:
+Helfer: Dropdown<br>
+Name: Themes<br>
+Icon: mdi:format-paint<br>
+Optionen:<br>
 
 - Caule Black Rose Glass
 - Caule Black Purple Glass
