@@ -207,4 +207,4 @@ Am Besten findet man sich damit zurecht, wenn man mit den diversen Einstellungen
 
 
 9. **Anmerkungen**<br>
-Ein kleines Manko ist, dass die Sidebar leider nicht das Theme der jeweiligen Seite übernimmt, sondern nur das der allgemeinen Einstellung aus dem Profil. Ich habe das mit einem Auswahl-Helfer und einer Automatisierung gelöst, in dem ich das Theme je nach Eintrag des Helfers in HA komplett einstelle. Hier der [LINK](https://github.com/MaxxKra/My_HA_Sidebar/blob/81da389a50c0916459d18d2926de7b7d8d41f8a9/Theme_Einstellungen.md) zum Helfer und der Automatisierung.
+Ein kleines Manko ist, dass die Sidebar leider nicht das Theme der jeweiligen Seite übernimmt, sondern nur das der allgemeinen Einstellung aus dem Profil. Ich habe das mit einem Auswahl-Helfer und einer Automatisierung gelöst, in dem ich das Theme je nach Eintrag des Helfers in HA komplett einstelle. Hier der [LINK](https://github.com/MaxxKra/My_HA_Sidebar/blob/ef332443958544bdb245c929917f5ce76590b906/Theme_Einstellungen.md) zum Helfer und der Automatisierung.
