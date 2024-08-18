@@ -4,9 +4,12 @@ Damit ich das Theme nicht immer in meinem Profil ändern muss, habe ich einen He
 
 Helfer: Dropdown
 
+
 Name: Themes
 
+
 Icon: mdi:format-paint
+
 
 Optionen:
 
